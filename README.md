@@ -88,16 +88,13 @@ python trainer.py --sweep_id=62z9brzv --project=wandb_vgg_experiments_4 --count=
    - The notebook will download the previously trained model from wandb.io and **print the local file path**
 
 
-   ### Option A: Automatically select best model (based on validation accuracy)
-      ### Automatically selects the best model
+   ### Option A: Automatically select best model (based on validation accuracy) -By default
          run = get_best_run(username, project_name)
-      ### Only Username and Project Name are required.Run Id if any ignored.
-      ### The notebook will fetch the run with the highest validation accuracy and download the corresponding model.
+      #### Only Username and Project Name are required. Run Id if any ignored. This will fetch the run with the highest validation accuracy and download the corresponding model.
 
    ### Option B: to download model using specific Run ID
-      ### Comment the automatic line above and use this instead
+      #### Comment the line above and uncomment this instead
          run = get_run(username, project_name, run_id)
-      ### Specific supplied run ID (from wandb dashboard) of the trained model used **
 
 ### Step 4: Test the Model
 
