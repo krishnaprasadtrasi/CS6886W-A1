@@ -84,7 +84,7 @@ python trainer.py --sweep_id=62z9brzv --project=wandb_vgg_experiments_4 --count=
 2. **Run the notebook and provide:**
    - **Username**: Username of wandb.io account
    - **Project Name**: Project name
-   - **Run ID**: Get this from your wandb dashboard like by identifying the run which has maximum validation accuracy (best performing run)
+   - **Run ID**: Needed only if Option B manual download option chosen .Get this from your wandb dashboard like by identifying the run which has maximum validation accuracy (best performing run)
    - The notebook will download the previously trained model from wandb.io and **print the local file path**
 
 
@@ -93,7 +93,7 @@ python trainer.py --sweep_id=62z9brzv --project=wandb_vgg_experiments_4 --count=
       #### Only Username and Project Name are required. Run Id if any ignored. This will fetch the run with the highest validation accuracy and download the corresponding model.
 
    ### Option B: to download model using specific Run ID
-      #### Comment the line above and uncomment this instead
+      #### Comment the line above and uncomment this instead in download_model.ipynb file
          run = get_run(username, project_name, run_id)
 
 ### Step 4: Test the Model
